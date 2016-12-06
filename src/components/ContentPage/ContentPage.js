@@ -2,7 +2,7 @@
  * Created by sea35 on 2016/12/6.
  */
 import React, { Component, PropTypes } from 'react';
-import { NavBar,Icon } from 'antd-mobile';
+import { NavBar,Icon,WhiteSpace } from 'antd-mobile';
 
 class ContentPage extends Component{
   static  propTypes = {
@@ -20,6 +20,7 @@ class ContentPage extends Component{
     return(
       <div>
         <NavBar leftContent="返回" mode="light" onLeftClick={this.context.router.goBack}>{this.props.title}</NavBar>
+        <WhiteSpace size="sm" />
         <div>{this.props.children}</div>
       </div>
     )

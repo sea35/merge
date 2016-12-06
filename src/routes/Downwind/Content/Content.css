@@ -1,0 +1,27 @@
+.showThumbStyle{
+  borderRadius:40;
+  height:80px;
+  width:80px
+}
+.showExtra{
+  height:80px;
+  width: 80px;
+}
+.rowHeight {
+  height: 60px;
+}
+.rowContainerImg {
+  height: 20px;
+  /*marginRight: 20px;*/
+  padding-right: 20px;
+}
+.tagContainer{
+  display: flex;
+  padding-top: 0.18rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.tagContainer > div {
+  margin-left: 0.18rem;
+  margin-bottom: 0.18rem;
+}

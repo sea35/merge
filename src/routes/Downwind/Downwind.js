@@ -93,7 +93,7 @@ class Downwind extends Component {
                padding: '12px 18px',
                backgroundColor: 'white',
              }}
-        >
+        onClick={()=>{this.linkTo()}} >
           <Flex>
             <Flex.Item style={{flex:3}}><div className={styles.row_height}>{obj.time}</div></Flex.Item>
             <Flex.Item><div className={styles.row_height}>{obj.seat}位</div></Flex.Item>
