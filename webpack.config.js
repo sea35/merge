@@ -7,12 +7,17 @@ module.exports = function(webpackConfig, env) {
      libraryName: 'antd-mobile',
      style: 'css',
   }]);
+
   // Support hmr
   if (env === 'development') {
-    webpackConfig.devtool = '#eval';
-    webpackConfig.babel.plugins.push('dva-hmr');
+    webpackConfig.devtool = '#eval'
+    webpackConfig.babel.plugins.push(['dva-hmr', {
+      entries: [
+        './src/index.js',
+      ],
+    }])
   } else {
-    webpackConfig.babel.plugins.push('dev-expression');
+    webpackConfig.babel.plugins.push('dev-expression')
   }
 
   // Don't extract common.js and common.css

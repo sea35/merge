@@ -1,0 +1,8 @@
+.row_height {
+  height: 60px;
+}
+.row_container_img {
+  height: 20px;
+  /*marginRight: 20px;*/
+  padding-right: 20px;
+}

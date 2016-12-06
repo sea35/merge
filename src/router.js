@@ -1,11 +1,25 @@
-import React, { PropTypes } from 'react';
-import { Router, Route, IndexRoute, Link } from 'dva/router';
-import IndexPage from './routes/IndexPage';
+import React from 'react'
+import { Router, Route , IndexRedirect } from 'dva/router'
+import {
+  App,
+  Error,
+  Downwind,
+  Me,
+  Stroke,
+  DownwindContentShow
+} from './routes'
 
-export default function({ history }) {
+export default function ({ history }) {
   return (
-    <Router history={history}>
-      <Route path="/" component={IndexPage} />
+    <Router history={ history }>
+      <Route path="/" component={ App } >
+        <IndexRedirect to="/Downwind" />
+        <Route path="/Downwind" component={ Downwind }/>
+        <Route path="Content/Show" component={ DownwindContentShow }/>
+        <Route path="/Me" component={ Me } />
+        <Route path="/Stroke" component={ Stroke } />
+        <Route path="*" component={ Error } />
+      </Route>
     </Router>
-  );
-};
+  )
+}
